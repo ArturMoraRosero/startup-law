@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StartUp Lawyers & Consultant | Ecuador, Latam, Global</title>
-    <meta name="description" content="Asesoría legal, financiera, tributaria y de talento humano diseñada para corporaciones y grupos empresariales en Latinoamérica.">
-    
+    <title>StartUp Lawyers & Consultant | Asesoría Legal Corporativa en Ecuador y Latam</title>
+    <meta name="description" content="Firma boutique con 18 años de trayectoria en asesoría jurídica, financiera, tributaria y de talento humano para corporaciones y grupos empresariales en Ecuador y Latinoamérica. Primera consulta de diagnóstico sin costo.">
+    <meta name="keywords" content="abogados corporativos Ecuador, asesoría legal empresas, derecho corporativo Quito, planificación tributaria, fusiones y adquisiciones, due diligence, compliance, asesoría financiera empresarial, talento humano Latam">
+    <meta name="author" content="StartUp Lawyers & Consultant">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0B1C3F">
+    <link rel="canonical" href="https://startup-law.vercel.app/">
+    <link rel="alternate" hreflang="es" href="https://startup-law.vercel.app/">
+
+    <!-- Geo / Local SEO -->
+    <meta name="geo.region" content="EC-P">
+    <meta name="geo.placename" content="Quito, Ecuador">
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_EC">
+    <meta property="og:site_name" content="StartUp Lawyers & Consultant">
+    <meta property="og:url" content="https://startup-law.vercel.app/">
+    <meta property="og:title" content="StartUp Lawyers & Consultant | Asesoría Legal Corporativa en Ecuador y Latam">
+    <meta property="og:description" content="Asesoría jurídica, financiera, tributaria y de talento humano para corporaciones y grupos empresariales. 18 años de trayectoria. Primera consulta de diagnóstico sin costo.">
+    <meta property="og:image" content="https://startup-law.vercel.app/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="StartUp Lawyers & Consultant — Asesoría legal corporativa">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="StartUp Lawyers & Consultant | Asesoría Legal Corporativa">
+    <meta name="twitter:description" content="Asesoría jurídica, financiera, tributaria y de talento humano para corporaciones en Ecuador y Latam. 18 años de trayectoria.">
+    <meta name="twitter:image" content="https://startup-law.vercel.app/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400&display=swap" rel="stylesheet">
@@ -1197,7 +1230,7 @@
                 <div class="ring ring-3"></div>
             </div>
             <a href="#" class="nav-logo">
-                <img src="https://startup-law.vercel.app/new-logo-nav.png" alt="StartUp Lawyers & Consultant Logo" onerror="this.src="https://startup-law.vercel.app/logo-nav.png"">
+                <img src="./new-logo-nav.png" alt="StartUp Lawyers & Consultant Logo" onerror="this.src='./logo-nav.png'">
             </a>
         </div>
         <div class="nav-links">
@@ -1225,8 +1258,7 @@
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-divider"></div>
-        <img src="https://startup-law.vercel.app/statue.png" class="hero-statue reveal" alt="Justitia">
-        
+
         <div class="hero-content">
             <div class="hero-location reveal"><div class="text-reveal-container"><span class="text-reveal">Ecuador · Latam · Global</span></div></div>
             <h1 class="reveal"><div class="text-reveal-container"><span class="text-reveal">Asesoría legal que protege</span></div><br><div class="text-reveal-container"><span class="text-reveal">y hace <i style="color: var(--gold-light);">crecer</i></span></div><br><div class="text-reveal-container"><span class="text-reveal">su empresa</span></div></h1>
@@ -1578,32 +1610,32 @@
                 <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" placeholder="Nombre" required>
+                            <input id="f-nombre" name="nombre" type="text" placeholder="Nombre" aria-label="Nombre" autocomplete="name" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Empresa" required>
+                            <input id="f-empresa" name="empresa" type="text" placeholder="Empresa" aria-label="Empresa" autocomplete="organization" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="email" placeholder="Correo electrónico" required>
+                            <input id="f-correo" name="correo" type="email" placeholder="Correo electrónico" aria-label="Correo electrónico" autocomplete="email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="País" required>
+                            <input id="f-pais" name="pais" type="text" placeholder="País" aria-label="País" autocomplete="country-name" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <select required>
+                        <select id="f-area" name="area" aria-label="Área de interés" required>
                             <option value="" disabled selected>Área de interés</option>
-                            <option value="juridico">Jurídico</option>
-                            <option value="financiero">Financiero</option>
-                            <option value="tributario">Tributario</option>
-                            <option value="talento">Talento</option>
-                            <option value="integral">Integral</option>
+                            <option value="Jurídico">Jurídico</option>
+                            <option value="Financiero">Financiero</option>
+                            <option value="Tributario">Tributario</option>
+                            <option value="Talento">Talento</option>
+                            <option value="Integral">Integral</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea rows="4" placeholder="Mensaje" required></textarea>
+                        <textarea id="f-mensaje" name="mensaje" rows="4" placeholder="Mensaje" aria-label="Mensaje" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-gold" id="submitBtn">Enviar consulta <span>→</span></button>
                 </form>
@@ -1613,7 +1645,7 @@
 
     <footer>
         <a href="#" class="footer-logo">
-            <img src="https://startup-law.vercel.app/logo-footer.png" alt="StartUp Lawyers & Consultant Logo" onerror="this.src="https://startup-law.vercel.app/logo-nav.png"">
+            <img src="./logo-footer.png" alt="StartUp Lawyers & Consultant Logo" onerror="this.src='./logo-nav.png'">
         </a>
         <div class="footer-links">
             <a href="#servicios">Servicios</a>
@@ -1627,6 +1659,41 @@
         </div>
     </footer>
     
+    <!-- Datos estructurados: SEO local para firma legal -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "StartUp Lawyers & Consultant",
+      "description": "Firma boutique de asesoría jurídica, financiera, tributaria y de talento humano para corporaciones y grupos empresariales en Ecuador y Latinoamérica.",
+      "url": "https://startup-law.vercel.app/",
+      "telephone": "+593-2-383-6752",
+      "email": "info@startuplawyers.ec",
+      "areaServed": ["Ecuador", "Latin America"],
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rumipamba E2-194 y República",
+        "addressLocality": "Quito",
+        "addressCountry": "EC"
+      },
+      "knowsAbout": [
+        "Derecho Corporativo",
+        "Fusiones y Adquisiciones",
+        "Planificación Tributaria",
+        "Asesoría Financiera",
+        "Talento Humano",
+        "Compliance"
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Jurídico & Corporativo" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Financiero & Contable" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tributario" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Talento Humano" } }
+      ]
+    }
+    </script>
+
     <script>
         // Navigation scroll effect
         window.addEventListener('scroll', () => {
@@ -1668,7 +1735,7 @@
             btn.innerHTML = '✓ Mensaje enviado';
             btn.style.backgroundColor = '#2D6A4F';
             btn.style.color = 'var(--white)';
-            
+
             // Reset after 3 seconds
             setTimeout(() => {
                 btn.innerHTML = originalText;
