@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartUp Lawyers & Consultant | Ecuador, Latam, Global</title>
+    <meta name="description" content="Asesoría legal, financiera, tributaria y de talento humano diseñada para corporaciones y grupos empresariales en Latinoamérica.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy: #0B1C3F;
+            --navy-light: #152847;
+            --gold: #C9A84C;
+            --gold-light: #E2C97E;
+            --cream: #F7F4EE;
+            --white: #FFFFFF;
+            --gray: #4A5568;
+            --gray-light: #6B7280;
+            --gray-lighter: #9CA3AF;
+            
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Outfit', sans-serif;
+            
+            --border-radius: 0; /* Strictly square corners */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--navy);
+            background-color: var(--white);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6, .serif {
+            font-family: var(--font-serif);
+            font-weight: 400;
+        }
+
+        .gold-label {
+            font-family: var(--font-sans);
+            color: var(--gold);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            margin-bottom: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .gold-label::after {
+            content: '';
+            display: block;
+            width: 3rem;
+            height: 1px;
+            background-color: var(--gold);
+        }
+
+        /* Buttons strictly square */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.7rem 1.6rem;
+            border-radius: var(--border-radius);
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--navy);
+            font-weight: 400;
+        }
+        .btn-gold:hover {
+            background-color: var(--gold-light);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: rgba(255,255,255,0.6);
+            border: 1px solid transparent;
+        }
+        .btn-outline:hover {
+            color: var(--white);
+        }
+        .btn-outline span {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .btn-outline:hover span {
+            transform: translateX(4px);
+        }
+
+        /* Reveal Animations (Linklaters Style) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Staggered Delays for Children */
+        .reveal-stagger > * {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-stagger.active > * {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-stagger.active > *:nth-child(1) { transition-delay: 0.1s; }
+        .reveal-stagger.active > *:nth-child(2) { transition-delay: 0.2s; }
+        .reveal-stagger.active > *:nth-child(3) { transition-delay: 0.3s; }
+        .reveal-stagger.active > *:nth-child(4) { transition-delay: 0.4s; }
+        .reveal-stagger.active > *:nth-child(5) { transition-delay: 0.5s; }
+
+        /* Clip-Path Text Reveal */
+        .text-reveal-container {
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .text-reveal {
+            display: inline-block;
+            transform: translateY(100%);
+            filter: blur(20px);
+            letter-spacing: 0.15em;
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                        filter 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+                        letter-spacing 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active .text-reveal, .reveal-stagger.active .text-reveal {
+            transform: translateY(0);
+            filter: blur(0);
+            letter-spacing: normal;
+        }
+
+        /* Layout sections */
+        section {
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            height: 180px; 
+            padding: 0 4rem;
+            overflow: visible;
+            transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        nav.scrolled {
+            height: 95px;
+            background-color: rgba(11, 28, 63, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+        }
+        /* Nav Logo with animated rings */
+        .nav-logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 170px;
+            height: 170px;
+            margin-right: 1.5rem;
+            transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1), height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        nav.scrolled .nav-logo-container {
+            width: 170px;
+            height: 170px;
+        }
+        
+        .nav-logo {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 150px;
+            width: auto;
+            position: relative;
+            z-index: 2;
+            transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        nav.scrolled .nav-logo img {
+            height: 150px;
+        }
+
+        .animated-rings {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 170px;
+            height: 170px;
+            z-index: 1;
+            pointer-events: none;
+            transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1), height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        nav.scrolled .animated-rings {
+            width: 170px;
+            height: 170px;
+        }
+
+        .ring {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        nav.scrolled .ring-1, 
+        nav.scrolled .ring-2 {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        nav.scrolled .ring-3 {
+            opacity: 1;
+            border-color: var(--gold);
+            border-width: 1px;
+            width: 150px; height: 150px;
+            top: 10px; left: 10px;
+        }
+
+        nav.scrolled .ring-2 {
+            width: 160px; height: 160px;
+            top: 5px; left: 5px;
+        }
+
+        .ring-1 {
+            border-top-color: var(--gold);
+            border-right-color: rgba(201, 168, 76, 0.3);
+            animation: spin 8s linear infinite;
+        }
+        
+        .ring-2 {
+            border-bottom-color: var(--gold-light);
+            border-left-color: rgba(226, 201, 126, 0.4);
+            width: 160px; height: 160px;
+            top: 5px; left: 5px;
+            animation: spin-reverse 12s linear infinite;
+        }
+
+        .ring-3 {
+            border-right-color: var(--gold);
+            width: 150px; height: 150px;
+            top: 10px; left: 10px;
+            opacity: 0.6;
+            animation: spin 15s linear infinite;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes spin-reverse {
+            100% { transform: rotate(-360deg); }
+        }
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            margin-left: auto;
+            margin-right: 2rem;
+        }
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        .mobile-toggle {
+            display: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background-color: var(--navy);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .mobile-menu.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .mobile-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-family: var(--font-serif);
+            letter-spacing: 0.1em;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 800px;
+            display: flex;
+            align-items: center;
+            padding-top: 240px; /* Increased to avoid overlap with large logo */
+            color: var(--white);
+            background-color: var(--navy);
+            overflow: hidden;
+        }
+        .hero-video {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            filter: hue-rotate(-45deg) saturate(0.7) brightness(0.9); /* Shift purple to navy and soften */
+            animation: kenBurns 40s ease-in-out infinite alternate;
+        }
+        @keyframes kenBurns {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.15); }
+        }
+        .hero-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80vh;
+            height: 80vh;
+            transform: translate(-50%, -50%);
+            opacity: 0.04;
+            z-index: 1;
+            pointer-events: none;
+            color: var(--gold);
+            will-change: transform;
+        }
+        .hero-watermark svg {
+            width: 100%;
+            height: 100%;
+            stroke: currentColor;
+            stroke-width: 0.5;
+            fill: none;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(11, 28, 63, 0.85) 0%, rgba(11, 28, 63, 0.6) 50%, rgba(201, 168, 76, 0.1) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 4;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            color: var(--white);
+            will-change: transform;
+        }
+
+        .hero-statue {
+            position: absolute;
+            bottom: -5%;
+            right: 0%;
+            height: 95vh;
+            width: auto;
+            z-index: 3;
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(50px) scale(1.02);
+            filter: brightness(1.15) contrast(1.05) drop-shadow(0 0 40px rgba(201,168,76,0.18)) drop-shadow(0 10px 60px rgba(0,0,0,0.5));
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, opacity;
+        }
+
+        .hero-statue.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-statue {
+                height: 70vh;
+                right: -5%;
+                opacity: 0.4 !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-statue {
+                display: block;
+                height: 65vh;
+                right: 50%;
+                transform: translateX(50%) translateY(50px) scale(1.02);
+                bottom: 0;
+                opacity: 0 !important;
+                filter: brightness(1.1) contrast(1.05) drop-shadow(0 0 30px rgba(201,168,76,0.15)) drop-shadow(0 10px 40px rgba(0,0,0,0.5));
+                mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+                -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+            }
+            .hero-statue.active {
+                opacity: 0.35 !important;
+                transform: translateX(50%) translateY(0) scale(1) !important;
+            }
+        }
+        .hero-location {
+            font-family: var(--font-sans);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0; transform: translateY(30px);
+            animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+        }
+        .hero-location::before {
+            content: '';
+            display: block;
+            width: 2.5rem; height: 1px;
+            background-color: var(--gold);
+        }
+        .hero h1 {
+            font-size: clamp(3rem, 5.5vw, 5rem);
+            font-weight: 300;
+            line-height: 1.08;
+            max-width: 680px;
+            margin-bottom: 2rem;
+            opacity: 0; transform: translateY(30px);
+            animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+        }
+        .hero h1 i {
+            color: var(--gold-light);
+        }
+        .hero-subtitle {
+            font-weight: 300;
+            color: rgba(255,255,255,0.58);
+            max-width: 480px;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            opacity: 0; transform: translateY(30px);
+            animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+        }
+        .hero-ctas {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            opacity: 0; transform: translateY(30px);
+            animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+        }
+        .hero-stats {
+            position: absolute;
+            bottom: 3rem; right: 2%;
+            text-align: right;
+            z-index: 3;
+            opacity: 0; transform: translateY(30px);
+            animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards;
+        }
+        .stat-item {
+            margin-bottom: 1rem;
+        }
+        .stat-number {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            font-weight: 300;
+            color: var(--white);
+            line-height: 1;
+        }
+        .stat-number sup {
+            color: var(--gold);
+            font-size: 1.5rem;
+            vertical-align: super;
+        }
+        .stat-label {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 0.1em;
+        }
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem; left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .scroll-line {
+            width: 1px; height: 30px;
+            background-color: var(--gold);
+            animation: scrollBounce 2s infinite;
+        }
+        .scroll-text {
+            color: var(--gold);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        @keyframes heroFadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scrollBounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* Marquee */
+        .marquee {
+            background-color: var(--gold);
+            color: var(--navy);
+            padding: 1rem 0;
+            overflow: hidden;
+            display: flex;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: flex;
+            animation: marquee 25s linear infinite;
+        }
+        .marquee span {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            padding-right: 2rem;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Logo Carousel */
+        .logos-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+            overflow: hidden;
+            position: relative;
+        }
+        .logos-container {
+            width: 100%;
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+        .logos-track {
+            display: flex;
+            width: fit-content;
+            animation: scrollLogos 60s linear infinite;
+            gap: 6rem;
+            align-items: center;
+        }
+        .logos-track:hover {
+            animation-play-state: paused;
+        }
+        .logo-item {
+            flex-shrink: 0;
+            filter: grayscale(100%);
+            opacity: 0.35;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-item:hover {
+            opacity: 0.85;
+            filter: grayscale(0%);
+            transform: translateY(-2px);
+        }
+        .logo-item svg {
+            height: 100%;
+            width: auto;
+            color: var(--navy);
+        }
+        @keyframes scrollLogos {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-50% - 3rem)); }
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--cream);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+        .about-left h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            color: var(--navy);
+        }
+        .about-left p {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .about-right {
+            position: relative;
+        }
+        .quote-card {
+            background: linear-gradient(to right, rgba(201,168,76,0.1), var(--navy));
+            background-color: var(--navy);
+            padding: 4rem 3rem;
+            position: relative;
+            z-index: 2;
+            border-top: 2px solid var(--gold);
+        }
+        .quote-mark {
+            position: absolute;
+            top: 2rem; left: 2rem;
+            font-family: var(--font-serif);
+            font-size: 6rem;
+            color: rgba(201,168,76,0.25);
+            line-height: 1;
+        }
+        .quote-text {
+            color: var(--white);
+            font-size: 1.6rem;
+            font-style: italic;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+        .quote-author {
+            color: var(--gold);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .quote-deco {
+            position: absolute;
+            bottom: -1.5rem; right: -1.5rem;
+            width: 5rem; height: 5rem;
+            border: 1px solid rgba(201,168,76,0.2);
+            z-index: 1;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--white);
+        }
+        .services-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+            align-items: flex-end;
+        }
+        .services-header h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            color: var(--navy);
+            line-height: 1.1;
+        }
+        .services-header p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5px;
+            background-color: rgba(11, 28, 63, 0.08); /* Grid lines effect */
+        }
+        .service-card {
+            background-color: var(--white);
+            padding: 3rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .service-card:hover {
+            background-color: var(--navy);
+        }
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+        .sc-number {
+            position: absolute;
+            top: 2rem; right: 2rem;
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            color: var(--navy);
+            opacity: 0.06;
+            transition: color 400ms, opacity 400ms;
+        }
+        .service-card:hover .sc-number {
+            color: var(--white);
+        }
+        .sc-icon {
+            color: var(--gold);
+            margin-bottom: 2rem;
+        }
+        .sc-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+            transition: color 400ms;
+        }
+        .service-card:hover .sc-title {
+            color: var(--white);
+        }
+        .sc-desc {
+            font-size: 0.88rem;
+            color: var(--gray-light);
+            margin-bottom: 1.5rem;
+            transition: color 400ms;
+        }
+        .service-card:hover .sc-desc {
+            color: rgba(255,255,255,0.55);
+        }
+        .sc-list {
+            list-style: none;
+        }
+        .sc-list li {
+            font-size: 0.78rem;
+            color: var(--gray-lighter);
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            transition: color 400ms, border-color 400ms;
+        }
+        .service-card:hover .sc-list li {
+            color: rgba(255,255,255,0.45);
+            border-bottom-color: rgba(255,255,255,0.1);
+        }
+
+        /* Approach Section */
+        .approach {
+            background-color: var(--navy);
+            color: var(--white);
+            position: relative;
+        }
+        .approach-glow {
+            position: absolute;
+            top: 0; right: 0;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, rgba(11,28,63,0) 70%);
+            pointer-events: none;
+        }
+        .approach h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 4rem;
+            line-height: 1.1;
+            max-width: 600px;
+        }
+        .approach h2 i {
+            color: var(--gold-light);
+        }
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+        .approach-step {
+            padding: 3rem 2rem;
+            border-right: 1px solid rgba(255,255,255,0.07);
+        }
+        .approach-step:last-child {
+            border-right: none;
+        }
+        .step-num {
+            font-size: 0.85rem;
+            color: var(--gold);
+            letter-spacing: 0.08em;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        .step-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .step-desc {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+            line-height: 1.7;
+        }
+
+        /* Team Section */
+        .team {
+            background-color: var(--cream);
+        }
+        .team-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .team-header h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        .team-header p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .team-card {
+            background-color: var(--white);
+        }
+        .team-photo {
+            height: 260px;
+            background-color: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-bottom: 3px solid transparent;
+            border-image: linear-gradient(to right, var(--gold), transparent) 1;
+        }
+        .team-initials {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: rgba(255,255,255,0.3);
+        }
+        .team-photo:hover .linkedin-icon {
+            opacity: 1;
+        }
+        .linkedin-icon {
+            position: absolute;
+            top: 1rem; right: 1rem;
+            color: var(--gold);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .team-info {
+            padding: 1.75rem;
+        }
+        .team-name {
+            font-size: 1.2rem;
+            color: var(--navy);
+            margin-bottom: 0.25rem;
+        }
+        .team-role {
+            font-size: 0.72rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .team-bio {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.65;
+        }
+
+        /* Blog Section */
+        .blog {
+            background-color: var(--white);
+        }
+        .blog-header {
+            margin-bottom: 4rem;
+        }
+        .blog-header h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            color: var(--navy);
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .blog-card {
+            padding: 2rem;
+            border: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 2px solid transparent;
+            transition: border-bottom-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            background-color: var(--white);
+        }
+        .blog-card:hover {
+            border-bottom-color: var(--gold);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.04);
+        }
+        .blog-tag {
+            font-size: 0.65rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            margin-bottom: 1rem;
+        }
+        .blog-title {
+            font-size: 1.3rem;
+            color: var(--navy);
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        .blog-excerpt {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .blog-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .blog-date {
+            font-size: 0.72rem;
+            color: var(--gray-lighter);
+        }
+        .blog-read {
+            color: var(--gold);
+            font-size: 0.85rem;
+            text-decoration: none;
+        }
+        .blog-read span {
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        .blog-card:hover .blog-read span {
+            transform: translateX(4px);
+        }
+
+        /* CTA Band */
+        .cta-band {
+            background-color: var(--gold);
+            padding: 4rem 2rem;
+        }
+        .cta-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+        .cta-band h2 {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            color: var(--navy);
+            max-width: 700px;
+        }
+        .btn-navy {
+            background-color: var(--navy);
+            color: var(--gold);
+            padding: 1.1rem 2.5rem;
+        }
+        .btn-navy:hover {
+            background-color: var(--navy-light);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--navy);
+            color: var(--white);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+        }
+        .contact-left h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+        }
+        .contact-left p {
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--white);
+            font-size: 0.9rem;
+        }
+        .contact-item svg {
+            color: var(--gold);
+            width: 20px; height: 20px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            background-color: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--white);
+            padding: 1rem;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            border-radius: var(--border-radius); /* Strict square */
+            transition: border-color 300ms;
+        }
+        .form-group input::placeholder, .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.25);
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        .form-group select option {
+            background-color: var(--navy);
+            color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #07122A;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-logo img {
+            height: 85px;
+        }
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.3);
+            text-decoration: none;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            font-family: var(--font-sans);
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        .footer-copy {
+            color: rgba(255,255,255,0.2);
+            font-size: 0.72rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            nav { height: 140px; }
+            .nav-logo-container {
+                width: 130px;
+                height: 130px;
+                transform: none;
+                margin-top: 0;
+            }
+            .nav-logo img { height: 110px; }
+            .animated-rings { width: 130px; height: 130px; }
+            .ring-2 { width: 120px; height: 120px; }
+            .ring-3 { width: 110px; height: 110px; }
+            
+            .hero { padding-top: 180px; }
+
+            .nav-links, .hero-ctas .btn-outline { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-stats { display: none; }
+            .about-grid, .services-header, .contact-grid, .cta-container { grid-template-columns: 1fr; gap: 3rem; }
+            
+            footer { flex-direction: column; gap: 2rem; text-align: center; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            nav { height: 110px; padding: 0 1.5rem; }
+            .nav-logo-container {
+                width: 100px;
+                height: 100px;
+            }
+            .nav-logo img { height: 85px; }
+            .animated-rings { width: 100px; height: 100px; }
+            .ring-2 { width: 90px; height: 90px; }
+            .ring-3 { width: 85px; height: 85px; }
+
+            .hero { padding-top: 140px; }
+            
+            section { padding: 4rem 1.5rem; }
+            .services-grid, .approach-grid, .team-grid, .blog-grid { grid-template-columns: 1fr; }
+            .approach-step { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
+            
+            .hero h1 { font-size: clamp(2.2rem, 8vw, 3rem); }
+            .hero-location { font-size: 0.65rem; gap: 1rem; }
+            .hero-location::before { width: 1.5rem; }
+            
+            .about-left p { font-size: 0.95rem; }
+            .quote-text { font-size: 1.3rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero-ctas { flex-direction: column; width: 100%; }
+            .hero-ctas .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-logo-container">
+            <div class="animated-rings">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+            </div>
+            <a href="#" class="nav-logo">
+                <img src="./new-logo-nav.png" alt="StartUp Lawyers & Consultant Logo" onerror="this.src='./logo-nav.png'">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#equipo">Equipo</a>
+            <a href="#blog">Blog</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <a href="#contacto" class="btn btn-gold" style="display: none;">Agenda una consulta</a>
+        <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-toggle" style="position:absolute; top: 1.5rem; right: 2rem;" onclick="toggleMenu()">✕</div>
+        <a href="#servicios" onclick="toggleMenu()">Servicios</a>
+        <a href="#equipo" onclick="toggleMenu()">Equipo</a>
+        <a href="#blog" onclick="toggleMenu()">Blog</a>
+        <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+        <a href="#contacto" class="btn btn-gold" onclick="toggleMenu()">Agenda una consulta</a>
+    </div>
+
+<section class="hero" id="inicio">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-divider"></div>
+        <img src="statue.png" class="hero-statue reveal" alt="Justitia">
+        
+        <div class="hero-content">
+            <div class="hero-location reveal"><div class="text-reveal-container"><span class="text-reveal">Ecuador · Latam · Global</span></div></div>
+            <h1 class="reveal"><div class="text-reveal-container"><span class="text-reveal">Asesoría legal que protege</span></div><br><div class="text-reveal-container"><span class="text-reveal">y hace <i style="color: var(--gold-light);">crecer</i></span></div><br><div class="text-reveal-container"><span class="text-reveal">su empresa</span></div></h1>
+            <p class="hero-subtitle reveal">
+                Servicios jurídicos, financieros, tributarios y de talento humano — diseñados para corporaciones y grupos empresariales en Latinoamérica, con 18 años de trayectoria que lo respaldan.
+            </p>
+            <div class="hero-ctas reveal-stagger">
+                <a href="#contacto" class="btn btn-gold">Agenda una consulta</a>
+                <a href="#servicios" class="btn btn-outline">Ver servicios <span>→</span></a>
+            </div>
+        </div>
+        
+        <div class="hero-stats reveal-stagger">
+            <div class="stat-item">
+                <div class="stat-number">18<sup>+</sup></div>
+                <div class="stat-label">Años de experiencia</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Áreas de práctica</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98<sup>%</sup></div>
+                <div class="stat-label">Satisfacción del cliente</div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <div class="scroll-text">Scroll</div>
+        </div>
+    </section>
+
+    <div class="marquee">
+        <div class="marquee-content">
+            <!-- Repeated twice for seamless loop -->
+            <span>Derecho Corporativo · Asesoría Financiera · Gestión Tributaria · Recursos Humanos · Fusiones & Adquisiciones · Compliance · Contratos Internacionales · Estructuración Societaria · </span>
+            <span>Derecho Corporativo · Asesoría Financiera · Gestión Tributaria · Recursos Humanos · Fusiones & Adquisiciones · Compliance · Contratos Internacionales · Estructuración Societaria · </span>
+        </div>
+    </div>
+
+    <section class="about" id="nosotros">
+        <div class="container about-grid">
+            <div class="about-left reveal">
+                <div class="gold-label">Sobre Nosotros</div>
+                <h2 class="serif">Una firma que <i style="color: var(--navy-light);">escucha</i> antes de actuar</h2>
+                <p>Con más de 18 años de experiencia en el mercado empresarial ecuatoriano, en StartUp Lawyers & Consultant no aplicamos soluciones genéricas: construimos relaciones de largo plazo basadas en la confianza, la ética y la excelencia técnica.</p>
+                <p>Combinamos la profundidad técnica de un gran bufete con la cercanía y velocidad de respuesta que solo una firma boutique puede ofrecer. Nuestros clientes son corporaciones y grupos empresariales que necesitan un asesor que los conozca, entienda su industria y esté disponible cuando más lo necesitan.</p>
+                <p>Con presencia en Ecuador y alcance en todo el mercado hispanohablante global, somos el socio estratégico que su organización merece.</p>
+            </div>
+            <div class="about-right reveal">
+                <div class="quote-card">
+                    <div class="quote-mark">"</div>
+                    <div class="quote-text">No nos contentamos con resolver el problema de hoy. Construimos la estructura legal y financiera para el crecimiento de mañana.</div>
+                    <div class="quote-author">Principio Fundador — StartUp Lawyers & Consultant</div>
+                </div>
+                <div class="quote-deco"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Logo Carousel -->
+    <section class="logos-section">
+        <div class="logos-container">
+            <div class="logos-track">
+                <!-- Unit of placeholders - To be replaced with actual 50 logos -->
+                <div class="logo-item"><svg viewBox="0 0 140 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28" font-style="italic">Enterprise</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 120 40" fill="currentColor"><text x="0" y="30" font-family="Outfit" font-size="24" font-weight="300" letter-spacing="0.1em">STRATOS</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 150 40" fill="currentColor"><rect x="0" y="10" width="20" height="20" fill="var(--gold-light)"/><text x="30" y="30" font-family="Outfit" font-size="24">Vanguard</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 130 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28">AURELIUS</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 140 40" fill="currentColor"><circle cx="15" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="1"/><text x="40" y="30" font-family="Outfit" font-size="24" font-weight="300">Infinite</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 110 40" fill="currentColor"><text x="0" y="30" font-family="Outfit" font-size="26" font-weight="400">NOMAD</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 160 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28" font-style="italic">Highland Groups</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 130 40" fill="currentColor"><path d="M0 30 L20 10 L40 30" fill="none" stroke="var(--gold)" stroke-width="2"/><text x="50" y="30" font-family="Outfit" font-size="24">Summit</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 120 40" fill="currentColor"><text x="0" y="30" font-family="Outfit" font-size="24" font-weight="300" letter-spacing="0.2em">PRISM</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 140 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28">Equilibrium</text></svg></div>
+                
+                <!-- Repeated for seamless loop -->
+                <div class="logo-item"><svg viewBox="0 0 140 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28" font-style="italic">Enterprise</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 120 40" fill="currentColor"><text x="0" y="30" font-family="Outfit" font-size="24" font-weight="300" letter-spacing="0.1em">STRATOS</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 150 40" fill="currentColor"><rect x="0" y="10" width="20" height="20" fill="var(--gold-light)"/><text x="30" y="30" font-family="Outfit" font-size="24">Vanguard</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 130 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28">AURELIUS</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 140 40" fill="currentColor"><circle cx="15" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="1"/><text x="40" y="30" font-family="Outfit" font-size="24" font-weight="300">Infinite</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 110 40" fill="currentColor"><text x="0" y="30" font-family="Outfit" font-size="26" font-weight="400">NOMAD</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 160 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28" font-style="italic">Highland Groups</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 130 40" fill="currentColor"><path d="M0 30 L20 10 L40 30" fill="none" stroke="var(--gold)" stroke-width="2"/><text x="50" y="30" font-family="Outfit" font-size="24">Summit</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 120 40" fill="currentColor"><text x="0" y="30" font-family="Outfit" font-size="24" font-weight="300" letter-spacing="0.2em">PRISM</text></svg></div>
+                <div class="logo-item"><svg viewBox="0 0 140 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28">Equilibrium</text></svg></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="services-header reveal-stagger">
+                <div>
+                    <div class="gold-label">Áreas de Práctica</div>
+                    <h2 class="serif">
+                        <div class="text-reveal-container"><span class="text-reveal">Cuatro pilares.</span></div><br>
+                        <div class="text-reveal-container"><span class="text-reveal">Un solo socio estratégico.</span></div>
+                    </h2>
+                </div>
+                <p>Un ecosistema integrado para que su empresa cuente con asesoría jurídica, financiera, tributaria y de talento en un solo lugar de confianza.</p>
+            </div>
+            
+            <div class="services-grid reveal-stagger">
+                <div class="service-card">
+                    <div class="sc-number">01</div>
+                    <svg class="sc-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                    <h3 class="sc-title serif">Jurídico & Corporativo</h3>
+                    <p class="sc-desc">Protección y estructuración legal para negocios en crecimiento.</p>
+                    <ul class="sc-list">
+                        <li>Constitución y estructuración societaria</li>
+                        <li>Contratos nacionales e internacionales</li>
+                        <li>Fusiones, adquisiciones y due diligence</li>
+                        <li>Compliance y gobierno corporativo</li>
+                        <li>Resolución de disputas comerciales</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="sc-number">02</div>
+                    <svg class="sc-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+                        <rect x="2" y="4" width="20" height="16" rx="0" />
+                        <path d="M2 8h20M6 16h.01M10 16h.01M14 16h.01M18 16h.01"/>
+                    </svg>
+                    <h3 class="sc-title serif">Financiero & Contable</h3>
+                    <p class="sc-desc">Estrategia financiera enfocada en la rentabilidad y escala.</p>
+                    <ul class="sc-list">
+                        <li>Planificación financiera y presupuestaria</li>
+                        <li>Reestructuración de deuda y capital</li>
+                        <li>Análisis de inversión corporativa</li>
+                        <li>Auditoría y estados financieros</li>
+                        <li>Contabilidad de gestión</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="sc-number">03</div>
+                    <svg class="sc-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+                    </svg>
+                    <h3 class="sc-title serif">Tributario</h3>
+                    <p class="sc-desc">Optimización y cumplimiento riguroso de normativas.</p>
+                    <ul class="sc-list">
+                        <li>Planificación tributaria estratégica</li>
+                        <li>Cumplimiento fiscal internacional</li>
+                        <li>Optimización de carga impositiva</li>
+                        <li>Representación ante autoridades</li>
+                        <li>Precios de transferencia</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="sc-number">04</div>
+                    <svg class="sc-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <h3 class="sc-title serif">Talento Humano</h3>
+                    <p class="sc-desc">Gestión estratégica del capital humano al más alto nivel.</p>
+                    <ul class="sc-list">
+                        <li>Reclutamiento y selección ejecutiva</li>
+                        <li>Diseño de estructuras organizacionales</li>
+                        <li>Compensación y beneficios estratégicos</li>
+                        <li>Derecho laboral y cumplimiento</li>
+                        <li>Cultura y clima organizacional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="approach">
+        <div class="approach-glow"></div>
+        <div class="container relative reveal-stagger">
+            <div class="gold-label">Nuestro Método</div>
+            <h2 class="serif">
+                <div class="text-reveal-container"><span class="text-reveal">Resultados que se logran con</span></div><br>
+                <div class="text-reveal-container"><span class="text-reveal">método y <i style="color: var(--gold-light);">presencia</i></span></div>
+            </h2>
+            
+            <div class="approach-grid reveal-stagger">
+                <div class="approach-step reveal">
+                    <span class="step-num">01</span>
+                    <h3 class="step-title serif">Escuchar</h3>
+                    <p class="step-desc">Comprendemos su negocio, industria y objetivos antes de proponer cualquier solución.</p>
+                </div>
+                <div class="approach-step reveal">
+                    <span class="step-num">02</span>
+                    <h3 class="step-title serif">Diseñar</h3>
+                    <p class="step-desc">Construimos estrategia a medida integrando los cuatro pilares cuando la situación lo requiere.</p>
+                </div>
+                <div class="approach-step reveal">
+                    <span class="step-num">03</span>
+                    <h3 class="step-title serif">Acompañar</h3>
+                    <p class="step-desc">Reuniones frecuentes y seguimiento constante para asegurar ejecución en tiempo real.</p>
+                </div>
+                <div class="approach-step reveal" style="border-right: none;">
+                    <span class="step-num">04</span>
+                    <h3 class="step-title serif">Consolidar</h3>
+                    <p class="step-desc">Relaciones de largo plazo que convierten a nuestros clientes en socios estratégicos de crecimiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="team" id="equipo">
+        <div class="container">
+            <div class="team-header reveal-stagger">
+                <div class="gold-label">Las personas detrás de cada decisión</div>
+                <h2 class="serif">
+                    <div class="text-reveal-container"><span class="text-reveal">Las personas detrás de <i style="color: var(--gold);">cada decisión</i></span></div>
+                </h2>
+                <p>Un equipo multidisciplinario con formación internacional y profundo conocimiento del entorno latinoamericano.</p>
+            </div>
+            
+            <div class="team-grid reveal-stagger">
+                <div class="team-card">
+                    <div class="team-photo">
+                        <span class="team-initials">SF</span>
+                        <svg class="linkedin-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name serif">Socio Fundador</h3>
+                        <span class="team-role">Derecho Corporativo</span>
+                        <p class="team-bio">Más de 18 años asesorando grupos empresariales en Ecuador y Latinoamérica en estructuración corporativa, contratos internacionales y resolución de conflictos.</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <span class="team-initials">DF</span>
+                        <svg class="linkedin-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name serif">Directora Financiero-Tributaria</h3>
+                        <span class="team-role">Finanzas & Tributos</span>
+                        <p class="team-bio">Experta en planificación tributaria y reestructuración financiera para medianas y grandes empresas en el mercado ecuatoriano e internacional.</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <span class="team-initials">DT</span>
+                        <svg class="linkedin-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name serif">Directora de Talento Humano</h3>
+                        <span class="team-role">RRHH Estratégico</span>
+                        <p class="team-bio">Especializada en atracción ejecutiva, derecho laboral y diseño de cultura organizacional para corporaciones en etapa de crecimiento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="blog-header reveal-stagger">
+                <div class="gold-label">Perspectivas & Análisis</div>
+                <h2 class="serif">
+                    <div class="text-reveal-container"><span class="text-reveal">El conocimiento legal como ventaja competitiva</span></div>
+                </h2>
+            </div>
+            
+            <div class="blog-grid reveal-stagger">
+                <div class="blog-card">
+                    <span class="blog-tag">Derecho Corporativo</span>
+                    <h3 class="blog-title serif">Cómo estructurar una sociedad holding en Ecuador para expansión regional</h3>
+                    <p class="blog-excerpt">Las holdings permiten optimizar la carga tributaria y proteger activos en distintas jurisdicciones. Conozca los pasos clave según la normativa ecuatoriana vigente.</p>
+                    <div class="blog-footer">
+                        <span class="blog-date">Oct 15, 2026</span>
+                        <a href="#" class="blog-read">Leer más <span>→</span></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <span class="blog-tag">M&A y Due Diligence</span>
+                    <h3 class="blog-title serif">Due diligence en fusiones: los 7 puntos críticos antes de firmar cualquier acuerdo</h3>
+                    <p class="blog-excerpt">Una adquisición sin due diligence adecuado puede convertirse en una carga legal y financiera. Le explicamos qué revisar y por qué.</p>
+                    <div class="blog-footer">
+                        <span class="blog-date">Sep 28, 2026</span>
+                        <a href="#" class="blog-read">Leer más <span>→</span></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <span class="blog-tag">Derecho Tributario</span>
+                    <h3 class="blog-title serif">Tributación corporativa en Latinoamérica 2026: lo que toda empresa debe anticipar</h3>
+                    <p class="blog-excerpt">Los cambios regulatorios en Ecuador y la región están redefiniendo las estrategias fiscales corporativas. Un análisis de lo que viene.</p>
+                    <div class="blog-footer">
+                        <span class="blog-date">Sep 10, 2026</span>
+                        <a href="#" class="blog-read">Leer más <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="cta-band reveal">
+        <div class="cta-container">
+            <h2 class="serif">¿Listo para tener un socio legal que conozca su empresa <i style="color: var(--navy-light);">por dentro</i>?</h2>
+            <a href="#contacto" class="btn btn-navy">Hablemos hoy</a>
+        </div>
+    </section>
+
+    <section class="contact" id="contacto">
+        <div class="container contact-grid">
+            <div class="contact-left reveal">
+                <div class="gold-label">Contáctenos</div>
+                <h2 class="serif">Su primer paso hacia una asesoría de <i style="color: var(--gold);">alto nivel</i></h2>
+                <p>Nuestra primera consulta de diagnóstico no tiene costo. Es una sesión de trabajo para entender su modelo de negocio y determinar si somos el socio adecuado para su organización.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <span>Rumipamba E2-194 y República, Quito, Ecuador</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        <span>(+593) 02 383 6752 / 383 6753</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        <span>info@startuplawyers.ec</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-right reveal">
+                <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Empresa" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="País" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Área de interés</option>
+                            <option value="juridico">Jurídico</option>
+                            <option value="financiero">Financiero</option>
+                            <option value="tributario">Tributario</option>
+                            <option value="talento">Talento</option>
+                            <option value="integral">Integral</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gold" id="submitBtn">Enviar consulta <span>→</span></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="#" class="footer-logo">
+            <img src="./logo-footer.png" alt="StartUp Lawyers & Consultant Logo" onerror="this.src='./logo-nav.png'">
+        </a>
+        <div class="footer-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#equipo">Equipo</a>
+            <a href="#blog">Blog</a>
+            <a href="#">Empleos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-copy">
+            &copy; 2026 StartUp Lawyers & Consultant
+        </div>
+    </footer>
+    
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 60) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        // Scroll Reveal
+        const revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Staggering logic is now handled in CSS for children of .reveal-stagger
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Form Submission Logic
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerHTML;
+            const originalBg = btn.style.backgroundColor;
+
+            // Success state
+            btn.innerHTML = '✓ Mensaje enviado';
+            btn.style.backgroundColor = '#2D6A4F';
+            btn.style.color = 'var(--white)';
+            
+            // Reset after 3 seconds
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.backgroundColor = '';
+                btn.style.color = '';
+                document.getElementById('contactForm').reset();
+            }, 3000);
+        }
+
+        // Hero Mouse Parallax
+        document.addEventListener('mousemove', (e) => {
+            const hero = document.querySelector('.hero');
+            const content = document.querySelector('.hero-content');
+            const watermark = document.querySelector('.hero-watermark');
+            if (!hero || !content) return;
+
+            const rect = hero.getBoundingClientRect();
+            if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+                const moveX = x * 30; // 30px max movement for text
+                const moveY = y * 20;
+
+                // Removed content.style.transform to keep text static as requested
+
+
+                const statue = document.querySelector('.hero-statue');
+                if (statue) {
+                    const sx = x * -40; // Inverse and stronger parallax for statue
+                    const sy = y * -25;
+                    statue.style.transform = `translate3d(${sx}px, ${sy}px, 0)`;
+                }
+
+                if (watermark) {
+                    const wx = x * 15; // 15px max movement for watermark (parallax depth)
+                    const wy = y * 10;
+                    watermark.style.transform = `translate3d(calc(-50% + ${wx}px), calc(-50% + ${wy}px), 0)`;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
