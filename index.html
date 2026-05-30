@@ -394,7 +394,7 @@
             min-height: 800px;
             display: flex;
             align-items: center;
-            padding-top: 240px; /* Increased to avoid overlap with large logo */
+            padding-top: 320px; /* deja espacio bajo el logo grande */
             color: var(--white);
             background-color: var(--navy);
             overflow: hidden;
@@ -1761,7 +1761,7 @@
         // Navigation scroll effect
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
-            if (window.scrollY > 60) {
+            if (window.scrollY > 15) {
                 nav.classList.add('scrolled');
             } else {
                 nav.classList.remove('scrolled');
