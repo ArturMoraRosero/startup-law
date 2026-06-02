@@ -289,14 +289,17 @@
             transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        nav.scrolled .ring-1, 
+        nav.scrolled .ring-1 {
+            opacity: 1;
+            width: 78px; height: 78px;
+            top: 0; left: 0;
+        }
         nav.scrolled .ring-2 {
-            opacity: 0;
-            transform: scale(0.8);
+            opacity: 0.9;
         }
 
         nav.scrolled .ring-3 {
-            opacity: 1;
+            opacity: 0.7;
             border-color: var(--gold);
             border-width: 1px;
             width: 70px; height: 70px;
