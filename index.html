@@ -393,8 +393,11 @@
             height: 100vh;
             min-height: 800px;
             display: flex;
-            align-items: center;
-            padding-top: 320px; /* deja espacio bajo el logo grande */
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 220px;   /* deja espacio bajo el logo */
+            padding-bottom: 90px; /* separa del marquee dorado */
             color: var(--white);
             background-color: var(--navy);
             overflow: hidden;
@@ -1221,6 +1224,70 @@
             .hero-ctas { flex-direction: column; width: 100%; }
             .hero-ctas .btn { width: 100%; }
         }
+        /* Testimonios */
+        .testimonials {
+            background-color: var(--cream);
+        }
+        .testi-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 3.5rem;
+        }
+        .testi-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: var(--navy);
+            line-height: 1.2;
+        }
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+        .testi-card {
+            margin: 0;
+            padding: 2.5rem 0 0;
+            border-top: 1px solid rgba(201, 168, 76, 0.4);
+            display: flex;
+            flex-direction: column;
+        }
+        .testi-mark {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            line-height: 0.6;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            height: 1.4rem;
+        }
+        .testi-quote {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--navy);
+            margin: 0 0 2rem;
+            flex-grow: 1;
+        }
+        .testi-card figcaption {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        .testi-name {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gold);
+        }
+        .testi-role {
+            font-family: var(--font-sans);
+            font-size: 0.78rem;
+            color: var(--gray-light);
+        }
+        @media (max-width: 768px) {
+            .testi-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .testi-header { margin-bottom: 2.5rem; }
+        }
     </style>
 </head>
 <body>
@@ -1521,6 +1588,42 @@
         </div>
     </section>
 
+    <!-- Testimonios. Reemplace las citas y nombres por los de sus clientes reales. -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="testi-header reveal">
+                <div class="gold-label" style="justify-content:center;">Testimonios</div>
+                <h2 class="serif">Lo que dicen <i style="color: var(--gold);">nuestros clientes</i></h2>
+            </div>
+            <div class="testi-grid reveal-stagger">
+                <figure class="testi-card">
+                    <div class="testi-mark">&ldquo;</div>
+                    <blockquote class="testi-quote">Nos acompañaron en una reestructuración compleja con criterio estratégico y absoluta discreción. Son un verdadero socio, no un proveedor.</blockquote>
+                    <figcaption>
+                        <span class="testi-name">Nombre Apellido</span>
+                        <span class="testi-role">Director General · Grupo Empresarial</span>
+                    </figcaption>
+                </figure>
+                <figure class="testi-card">
+                    <div class="testi-mark">&ldquo;</div>
+                    <blockquote class="testi-quote">Entendieron nuestro negocio desde el primer día. La asesoría tributaria nos dio claridad y tranquilidad para crecer en la región.</blockquote>
+                    <figcaption>
+                        <span class="testi-name">Nombre Apellido</span>
+                        <span class="testi-role">CFO · Compañía Industrial</span>
+                    </figcaption>
+                </figure>
+                <figure class="testi-card">
+                    <div class="testi-mark">&ldquo;</div>
+                    <blockquote class="testi-quote">Respuesta rápida, profundidad técnica y cercanía real. Es la firma que recomendamos cuando algo importante está en juego.</blockquote>
+                    <figcaption>
+                        <span class="testi-name">Nombre Apellido</span>
+                        <span class="testi-role">Gerente Legal · Corporación</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
     <section class="blog" id="blog">
         <div class="container">
             <div class="blog-header reveal-stagger">
@@ -1710,10 +1813,15 @@
                 var hg=g.createLinearGradient(0,0,Wm,0);
                 hg.addColorStop(0,'rgba(0,0,0,0)'); hg.addColorStop(0.5,'rgba(0,0,0,1)'); hg.addColorStop(1,'rgba(0,0,0,0)');
                 g.fillStyle=hg; g.fillRect(0,0,Wm,L);
-                return c;
+                // Horneamos el desenfoque una sola vez (no en cada frame -> mucho más rápido)
+                var pad=18;
+                var oc=document.createElement('canvas'); oc.width=Wm+pad*2; oc.height=L+pad*2;
+                var og=oc.getContext('2d');
+                og.filter='blur(7px)'; og.drawImage(c,pad,pad);
+                return oc;
             }
             function build(){
-                DPR=Math.min(window.devicePixelRatio||1,1.7);
+                DPR=Math.min(window.devicePixelRatio||1,1.25);
                 W=cv.width=Math.floor(cv.clientWidth*DPR);
                 H=cv.height=Math.floor(cv.clientHeight*DPR);
                 unit=Math.max(W,H);
@@ -1745,8 +1853,7 @@
                     ctx.save();
                     ctx.translate(px,py); ctx.rotate(rot); ctx.scale(1,lscale);
                     ctx.globalAlpha=Math.max(0,Math.min(1,alpha));
-                    ctx.filter='blur('+(5*DPR)+'px)';
-                    ctx.drawImage(b.cnv,-b.Wm/2,-b.L/2);
+                    ctx.drawImage(b.cnv,-b.cnv.width/2,-b.cnv.height/2);
                     ctx.restore();
                 }
                 ctx.globalCompositeOperation='source-over';
