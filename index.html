@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StartUp Lawyers & Consultant | Ecuador, Latam, Global</title>
-    <meta name="description" content="Asesoría legal, financiera, tributaria y de talento humano diseñada para corporaciones y grupos empresariales en Latinoamérica.">
-    
+    <title>StartUp Lawyers & Consultant | Asesoría Legal Corporativa en Ecuador y Latam</title>
+    <meta name="description" content="Firma boutique con 18 años de trayectoria en asesoría jurídica, financiera, tributaria y de talento humano para corporaciones y grupos empresariales en Ecuador y Latinoamérica. Primera consulta de diagnóstico sin costo.">
+    <meta name="keywords" content="abogados corporativos Ecuador, asesoría legal empresas, derecho corporativo Quito, planificación tributaria, fusiones y adquisiciones, due diligence, compliance, asesoría financiera empresarial, talento humano Latam">
+    <meta name="author" content="StartUp Lawyers & Consultant">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0B1C3F">
+    <link rel="canonical" href="https://startup-law.vercel.app/">
+    <link rel="alternate" hreflang="es" href="https://startup-law.vercel.app/">
+
+    <!-- Geo / Local SEO -->
+    <meta name="geo.region" content="EC-P">
+    <meta name="geo.placename" content="Quito, Ecuador">
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_EC">
+    <meta property="og:site_name" content="StartUp Lawyers & Consultant">
+    <meta property="og:url" content="https://startup-law.vercel.app/">
+    <meta property="og:title" content="StartUp Lawyers & Consultant | Asesoría Legal Corporativa en Ecuador y Latam">
+    <meta property="og:description" content="Asesoría jurídica, financiera, tributaria y de talento humano para corporaciones y grupos empresariales. 18 años de trayectoria. Primera consulta de diagnóstico sin costo.">
+    <meta property="og:image" content="https://startup-law.vercel.app/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="StartUp Lawyers & Consultant — Asesoría legal corporativa">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="StartUp Lawyers & Consultant | Asesoría Legal Corporativa">
+    <meta name="twitter:description" content="Asesoría jurídica, financiera, tributaria y de talento humano para corporaciones en Ecuador y Latam. 18 años de trayectoria.">
+    <meta name="twitter:image" content="https://startup-law.vercel.app/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400&display=swap" rel="stylesheet">
@@ -147,10 +180,11 @@
             overflow: hidden;
             display: inline-block;
             vertical-align: top;
+            padding-bottom: 0.18em;
         }
         .text-reveal {
             display: inline-block;
-            transform: translateY(100%);
+            transform: translateY(125%);
             filter: blur(20px);
             letter-spacing: 0.15em;
             transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
@@ -203,8 +237,8 @@
             transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1), height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
         nav.scrolled .nav-logo-container {
-            width: 170px;
-            height: 170px;
+            width: 78px;
+            height: 78px;
         }
         
         .nav-logo {
@@ -227,7 +261,7 @@
         }
 
         nav.scrolled .nav-logo img {
-            height: 150px;
+            height: 72px;
         }
 
         .animated-rings {
@@ -242,8 +276,8 @@
             transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1), height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
         nav.scrolled .animated-rings {
-            width: 170px;
-            height: 170px;
+            width: 78px;
+            height: 78px;
         }
 
         .ring {
@@ -255,23 +289,26 @@
             transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        nav.scrolled .ring-1, 
+        nav.scrolled .ring-1 {
+            opacity: 1;
+            width: 78px; height: 78px;
+            top: 0; left: 0;
+        }
         nav.scrolled .ring-2 {
-            opacity: 0;
-            transform: scale(0.8);
+            opacity: 0.9;
         }
 
         nav.scrolled .ring-3 {
-            opacity: 1;
+            opacity: 0.7;
             border-color: var(--gold);
             border-width: 1px;
-            width: 150px; height: 150px;
-            top: 10px; left: 10px;
+            width: 70px; height: 70px;
+            top: 4px; left: 4px;
         }
 
         nav.scrolled .ring-2 {
-            width: 160px; height: 160px;
-            top: 5px; left: 5px;
+            width: 74px; height: 74px;
+            top: 2px; left: 2px;
         }
 
         .ring-1 {
@@ -356,22 +393,23 @@
 
         /* Hero Section */
         .hero {
-            height: 100vh;
-            min-height: 800px;
+            min-height: 100vh;
             display: flex;
-            align-items: center;
-            padding-top: 240px; /* Increased to avoid overlap with large logo */
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 250px;   /* deja espacio bajo el logo */
+            padding-bottom: 90px; /* separa del marquee dorado */
             color: var(--white);
             background-color: var(--navy);
             overflow: hidden;
         }
-        .hero-video {
+        .hero-bg {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            object-fit: cover;
             z-index: 0;
-            filter: hue-rotate(-45deg) saturate(0.7) brightness(0.9); /* Shift purple to navy and soften */
-            animation: kenBurns 40s ease-in-out infinite alternate;
+            pointer-events: none;
+            display: block;
         }
         @keyframes kenBurns {
             0% { transform: scale(1); }
@@ -483,7 +521,7 @@
         .hero h1 {
             font-size: clamp(3rem, 5.5vw, 5rem);
             font-weight: 300;
-            line-height: 1.08;
+            line-height: 1.0;
             max-width: 680px;
             margin-bottom: 2rem;
             opacity: 0; transform: translateY(30px);
@@ -510,14 +548,14 @@
         }
         .hero-stats {
             position: absolute;
-            bottom: 3rem; right: 2%;
+            bottom: 3rem; right: 8%;
             text-align: right;
             z-index: 3;
             opacity: 0; transform: translateY(30px);
             animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards;
         }
         .stat-item {
-            margin-bottom: 1rem;
+            margin-bottom: 2.4rem;
         }
         .stat-number {
             font-family: var(--font-serif);
@@ -525,6 +563,7 @@
             font-weight: 300;
             color: var(--white);
             line-height: 1;
+            margin-bottom: 0.5rem;
         }
         .stat-number sup {
             color: var(--gold);
@@ -610,8 +649,8 @@
         .logos-track {
             display: flex;
             width: fit-content;
-            animation: scrollLogos 60s linear infinite;
-            gap: 6rem;
+            animation: scrollLogos 150s linear infinite;
+            gap: 4.5rem;
             align-items: center;
         }
         .logos-track:hover {
@@ -619,23 +658,27 @@
         }
         .logo-item {
             flex-shrink: 0;
-            filter: grayscale(100%);
-            opacity: 0.35;
+            opacity: 0.85;
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            height: 35px;
+            height: 46px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .logo-item:hover {
-            opacity: 0.85;
-            filter: grayscale(0%);
+            opacity: 1;
             transform: translateY(-2px);
         }
         .logo-item svg {
             height: 100%;
             width: auto;
             color: var(--navy);
+        }
+        .logo-item img {
+            height: 100%;
+            width: auto;
+            display: block;
+            object-fit: contain;
         }
         @keyframes scrollLogos {
             0% { transform: translateX(0); }
@@ -1167,8 +1210,11 @@
             .ring-2 { width: 90px; height: 90px; }
             .ring-3 { width: 85px; height: 85px; }
 
-            .hero { padding-top: 140px; }
-            
+            .hero { padding-top: 130px; align-items: flex-start; min-height: 0; height: auto; padding-bottom: 6.5rem; }
+            .hero-stats { position: static; text-align: left; margin-top: 2.5rem; }
+            .marquee { padding: 0.7rem 0; }
+            .marquee span { font-size: 0.55rem; letter-spacing: 0.14em; padding-right: 1.4rem; }
+
             section { padding: 4rem 1.5rem; }
             .services-grid, .approach-grid, .team-grid, .blog-grid { grid-template-columns: 1fr; }
             .approach-step { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
@@ -1186,6 +1232,70 @@
             .hero-ctas { flex-direction: column; width: 100%; }
             .hero-ctas .btn { width: 100%; }
         }
+        /* Testimonios */
+        .testimonials {
+            background-color: var(--cream);
+        }
+        .testi-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 3.5rem;
+        }
+        .testi-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: var(--navy);
+            line-height: 1.2;
+        }
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+        .testi-card {
+            margin: 0;
+            padding: 2.5rem 0 0;
+            border-top: 1px solid rgba(201, 168, 76, 0.4);
+            display: flex;
+            flex-direction: column;
+        }
+        .testi-mark {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            line-height: 0.6;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            height: 1.4rem;
+        }
+        .testi-quote {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--navy);
+            margin: 0 0 2rem;
+            flex-grow: 1;
+        }
+        .testi-card figcaption {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        .testi-name {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gold);
+        }
+        .testi-role {
+            font-family: var(--font-sans);
+            font-size: 0.78rem;
+            color: var(--gray-light);
+        }
+        @media (max-width: 768px) {
+            .testi-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .testi-header { margin-bottom: 2.5rem; }
+        }
     </style>
 </head>
 <body>
@@ -1197,7 +1307,7 @@
                 <div class="ring ring-3"></div>
             </div>
             <a href="#" class="nav-logo">
-                <img src="https://startup-law.vercel.app/new-logo-nav.png" alt="StartUp Lawyers & Consultant Logo" onerror="this.src="https://startup-law.vercel.app/logo-nav.png"">
+                <img src="./new-logo-nav.png" alt="StartUp Lawyers & Consultant Logo" onerror="this.src='./logo-nav.png'">
             </a>
         </div>
         <div class="nav-links">
@@ -1220,13 +1330,10 @@
     </div>
 
 <section class="hero" id="inicio">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4" type="video/mp4">
-        </video>
+        <canvas class="hero-bg" id="heroCanvas" aria-hidden="true"></canvas>
         <div class="hero-overlay"></div>
         <div class="hero-divider"></div>
-        <img src="https://startup-law.vercel.app/statue.png" class="hero-statue reveal" alt="Justitia">
-        
+
         <div class="hero-content">
             <div class="hero-location reveal"><div class="text-reveal-container"><span class="text-reveal">Ecuador · Latam · Global</span></div></div>
             <h1 class="reveal"><div class="text-reveal-container"><span class="text-reveal">Asesoría legal que protege</span></div><br><div class="text-reveal-container"><span class="text-reveal">y hace <i style="color: var(--gold-light);">crecer</i></span></div><br><div class="text-reveal-container"><span class="text-reveal">su empresa</span></div></h1>
@@ -1252,11 +1359,6 @@
                 <div class="stat-number">98<sup>%</sup></div>
                 <div class="stat-label">Satisfacción del cliente</div>
             </div>
-        </div>
-
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <div class="scroll-text">Scroll</div>
         </div>
     </section>
 
@@ -1292,29 +1394,72 @@
     <section class="logos-section">
         <div class="logos-container">
             <div class="logos-track">
-                <!-- Unit of placeholders - To be replaced with actual 50 logos -->
-                <div class="logo-item"><svg viewBox="0 0 140 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28" font-style="italic">Enterprise</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 120 40" fill="currentColor"><text x="0" y="30" font-family="Outfit" font-size="24" font-weight="300" letter-spacing="0.1em">STRATOS</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 150 40" fill="currentColor"><rect x="0" y="10" width="20" height="20" fill="var(--gold-light)"/><text x="30" y="30" font-family="Outfit" font-size="24">Vanguard</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 130 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28">AURELIUS</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 140 40" fill="currentColor"><circle cx="15" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="1"/><text x="40" y="30" font-family="Outfit" font-size="24" font-weight="300">Infinite</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 110 40" fill="currentColor"><text x="0" y="30" font-family="Outfit" font-size="26" font-weight="400">NOMAD</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 160 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28" font-style="italic">Highland Groups</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 130 40" fill="currentColor"><path d="M0 30 L20 10 L40 30" fill="none" stroke="var(--gold)" stroke-width="2"/><text x="50" y="30" font-family="Outfit" font-size="24">Summit</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 120 40" fill="currentColor"><text x="0" y="30" font-family="Outfit" font-size="24" font-weight="300" letter-spacing="0.2em">PRISM</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 140 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28">Equilibrium</text></svg></div>
-                
-                <!-- Repeated for seamless loop -->
-                <div class="logo-item"><svg viewBox="0 0 140 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28" font-style="italic">Enterprise</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 120 40" fill="currentColor"><text x="0" y="30" font-family="Outfit" font-size="24" font-weight="300" letter-spacing="0.1em">STRATOS</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 150 40" fill="currentColor"><rect x="0" y="10" width="20" height="20" fill="var(--gold-light)"/><text x="30" y="30" font-family="Outfit" font-size="24">Vanguard</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 130 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28">AURELIUS</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 140 40" fill="currentColor"><circle cx="15" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="1"/><text x="40" y="30" font-family="Outfit" font-size="24" font-weight="300">Infinite</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 110 40" fill="currentColor"><text x="0" y="30" font-family="Outfit" font-size="26" font-weight="400">NOMAD</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 160 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28" font-style="italic">Highland Groups</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 130 40" fill="currentColor"><path d="M0 30 L20 10 L40 30" fill="none" stroke="var(--gold)" stroke-width="2"/><text x="50" y="30" font-family="Outfit" font-size="24">Summit</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 120 40" fill="currentColor"><text x="0" y="30" font-family="Outfit" font-size="24" font-weight="300" letter-spacing="0.2em">PRISM</text></svg></div>
-                <div class="logo-item"><svg viewBox="0 0 140 40" fill="currentColor"><text x="0" y="30" font-family="Cormorant Garamond" font-size="28">Equilibrium</text></svg></div>
+                <div class="logo-item"><img src="logos/cliente-01.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-02.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-03.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-04.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-05.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-06.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-07.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-08.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-09.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-10.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-11.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-12.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-13.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-14.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-15.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-16.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-17.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-18.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-19.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-20.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-21.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-22.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-23.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-24.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-25.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-26.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-27.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-28.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-29.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-30.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-31.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-32.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+
+                <!-- Duplicado para bucle continuo -->
+                <div class="logo-item"><img src="logos/cliente-01.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-02.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-03.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-04.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-05.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-06.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-07.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-08.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-09.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-10.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-11.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-12.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-13.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-14.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-15.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-16.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-17.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-18.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-19.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-20.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-21.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-22.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-23.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-24.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-25.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-26.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-27.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-28.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-29.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-30.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-31.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
+                <div class="logo-item"><img src="logos/cliente-32.png" alt="Cliente StartUp Lawyers" loading="lazy"></div>
             </div>
         </div>
     </section>
@@ -1494,6 +1639,42 @@
         </div>
     </section>
 
+    <!-- Testimonios. Reemplace las citas y nombres por los de sus clientes reales. -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="testi-header reveal">
+                <div class="gold-label" style="justify-content:center;">Testimonios</div>
+                <h2 class="serif">Lo que dicen <i style="color: var(--gold);">nuestros clientes</i></h2>
+            </div>
+            <div class="testi-grid reveal-stagger">
+                <figure class="testi-card">
+                    <div class="testi-mark">&ldquo;</div>
+                    <blockquote class="testi-quote">Nos acompañaron en una reestructuración compleja con criterio estratégico y absoluta discreción. Son un verdadero socio, no un proveedor.</blockquote>
+                    <figcaption>
+                        <span class="testi-name">Nombre Apellido</span>
+                        <span class="testi-role">Director General · Grupo Empresarial</span>
+                    </figcaption>
+                </figure>
+                <figure class="testi-card">
+                    <div class="testi-mark">&ldquo;</div>
+                    <blockquote class="testi-quote">Entendieron nuestro negocio desde el primer día. La asesoría tributaria nos dio claridad y tranquilidad para crecer en la región.</blockquote>
+                    <figcaption>
+                        <span class="testi-name">Nombre Apellido</span>
+                        <span class="testi-role">CFO · Compañía Industrial</span>
+                    </figcaption>
+                </figure>
+                <figure class="testi-card">
+                    <div class="testi-mark">&ldquo;</div>
+                    <blockquote class="testi-quote">Respuesta rápida, profundidad técnica y cercanía real. Es la firma que recomendamos cuando algo importante está en juego.</blockquote>
+                    <figcaption>
+                        <span class="testi-name">Nombre Apellido</span>
+                        <span class="testi-role">Gerente Legal · Corporación</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
     <section class="blog" id="blog">
         <div class="container">
             <div class="blog-header reveal-stagger">
@@ -1578,32 +1759,32 @@
                 <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" placeholder="Nombre" required>
+                            <input id="f-nombre" name="nombre" type="text" placeholder="Nombre" aria-label="Nombre" autocomplete="name" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Empresa" required>
+                            <input id="f-empresa" name="empresa" type="text" placeholder="Empresa" aria-label="Empresa" autocomplete="organization" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="email" placeholder="Correo electrónico" required>
+                            <input id="f-correo" name="correo" type="email" placeholder="Correo electrónico" aria-label="Correo electrónico" autocomplete="email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="País" required>
+                            <input id="f-pais" name="pais" type="text" placeholder="País" aria-label="País" autocomplete="country-name" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <select required>
+                        <select id="f-area" name="area" aria-label="Área de interés" required>
                             <option value="" disabled selected>Área de interés</option>
-                            <option value="juridico">Jurídico</option>
-                            <option value="financiero">Financiero</option>
-                            <option value="tributario">Tributario</option>
-                            <option value="talento">Talento</option>
-                            <option value="integral">Integral</option>
+                            <option value="Jurídico">Jurídico</option>
+                            <option value="Financiero">Financiero</option>
+                            <option value="Tributario">Tributario</option>
+                            <option value="Talento">Talento</option>
+                            <option value="Integral">Integral</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea rows="4" placeholder="Mensaje" required></textarea>
+                        <textarea id="f-mensaje" name="mensaje" rows="4" placeholder="Mensaje" aria-label="Mensaje" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-gold" id="submitBtn">Enviar consulta <span>→</span></button>
                 </form>
@@ -1613,7 +1794,7 @@
 
     <footer>
         <a href="#" class="footer-logo">
-            <img src="https://startup-law.vercel.app/logo-footer.png" alt="StartUp Lawyers & Consultant Logo" onerror="this.src="https://startup-law.vercel.app/logo-nav.png"">
+            <img src="./logo-footer.png" alt="StartUp Lawyers & Consultant Logo" onerror="this.src='./logo-nav.png'">
         </a>
         <div class="footer-links">
             <a href="#servicios">Servicios</a>
@@ -1627,11 +1808,115 @@
         </div>
     </footer>
     
+    <!-- Datos estructurados: SEO local para firma legal -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "StartUp Lawyers & Consultant",
+      "description": "Firma boutique de asesoría jurídica, financiera, tributaria y de talento humano para corporaciones y grupos empresariales en Ecuador y Latinoamérica.",
+      "url": "https://startup-law.vercel.app/",
+      "telephone": "+593-2-383-6752",
+      "email": "info@startuplawyers.ec",
+      "areaServed": ["Ecuador", "Latin America"],
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rumipamba E2-194 y República",
+        "addressLocality": "Quito",
+        "addressCountry": "EC"
+      },
+      "knowsAbout": [
+        "Derecho Corporativo",
+        "Fusiones y Adquisiciones",
+        "Planificación Tributaria",
+        "Asesoría Financiera",
+        "Talento Humano",
+        "Compliance"
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Jurídico & Corporativo" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Financiero & Contable" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tributario" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Talento Humano" } }
+      ]
+    }
+    </script>
+
     <script>
+        // Fondo animado del hero: racimo de cuchillas doradas (Canvas, autoreproduce siempre)
+        (function(){
+            var cv=document.getElementById('heroCanvas'); if(!cv) return;
+            var ctx=cv.getContext('2d'), W,H,DPR,unit,blades=[];
+            var COOL='#8A6526', MID='#C9A84C', HOT='#F6E6BC';
+            function rgb(s){return [parseInt(s.slice(1,3),16),parseInt(s.slice(3,5),16),parseInt(s.slice(5,7),16)];}
+            function mix(a,b,t){var A=rgb(a),B=rgb(b);return 'rgb('+A.map(function(v,i){return Math.round(v+(B[i]-v)*t);}).join(',')+')';}
+            function makeBlade(Wm,L,bright){
+                var c=document.createElement('canvas'); c.width=Wm; c.height=L; var g=c.getContext('2d');
+                var edge=mix(COOL,MID,bright), core=mix(MID,HOT,bright);
+                var gr=g.createLinearGradient(0,0,Wm,0);
+                gr.addColorStop(0,edge); gr.addColorStop(0.5,core); gr.addColorStop(1,edge);
+                g.fillStyle=gr; g.fillRect(0,0,Wm,L);
+                g.globalCompositeOperation='destination-in';
+                var vg=g.createLinearGradient(0,0,0,L);
+                vg.addColorStop(0,'rgba(0,0,0,0)'); vg.addColorStop(0.5,'rgba(0,0,0,1)'); vg.addColorStop(1,'rgba(0,0,0,0)');
+                g.fillStyle=vg; g.fillRect(0,0,Wm,L);
+                var hg=g.createLinearGradient(0,0,Wm,0);
+                hg.addColorStop(0,'rgba(0,0,0,0)'); hg.addColorStop(0.5,'rgba(0,0,0,1)'); hg.addColorStop(1,'rgba(0,0,0,0)');
+                g.fillStyle=hg; g.fillRect(0,0,Wm,L);
+                // Horneamos el desenfoque una sola vez (no en cada frame -> mucho más rápido)
+                var pad=18;
+                var oc=document.createElement('canvas'); oc.width=Wm+pad*2; oc.height=L+pad*2;
+                var og=oc.getContext('2d');
+                og.filter='blur(7px)'; og.drawImage(c,pad,pad);
+                return oc;
+            }
+            function build(){
+                DPR=Math.min(window.devicePixelRatio||1,1.25);
+                W=cv.width=Math.floor(cv.clientWidth*DPR);
+                H=cv.height=Math.floor(cv.clientHeight*DPR);
+                unit=Math.max(W,H);
+                var N=8; blades=[]; var seed=7, rnd=function(){seed=(seed*9301+49297)%233280; return seed/233280;};
+                for(var i=0;i<N;i++){
+                    var f=i/(N-1);
+                    var bright=Math.max(0,Math.min(1,f+(rnd()-0.5)*0.25));
+                    var Wm=Math.round(unit*(0.075+rnd()*0.05));
+                    var L=Math.round(H*(0.62+rnd()*0.5));
+                    blades.push({cnv:makeBlade(Wm,L,bright),Wm:Wm,L:L,idx:i-(N-1)/2,
+                        alongBase:(rnd()-0.5)*H*0.22, ph:rnd()*6.28, phA:rnd()*6.28, phB:rnd()*6.28,
+                        baseA:0.55+0.35*f});
+                }
+            }
+            function draw(t){
+                if(!W) return requestAnimationFrame(draw);
+                ctx.clearRect(0,0,W,H);
+                var cx=W*0.66, cy=H*0.5, AL=[0.6,-0.8], PE=[0.8,0.6], spread=unit*0.052;
+                ctx.globalCompositeOperation='screen';
+                for(var k=0;k<blades.length;k++){
+                    var b=blades[k];
+                    var sway=Math.sin(t*0.00018+b.ph)*unit*0.012;
+                    var along=b.alongBase+Math.sin(t*0.00022+b.phA)*H*0.05;
+                    var off=b.idx*spread+sway;
+                    var px=cx+PE[0]*off+AL[0]*along, py=cy+PE[1]*off+AL[1]*along;
+                    var rot=37*Math.PI/180+Math.sin(t*0.00015+b.phB)*0.05;
+                    var lscale=1+0.10*Math.sin(t*0.00020+b.phA);
+                    var alpha=b.baseA*(0.6+0.4*Math.sin(t*0.00026+b.ph));
+                    ctx.save();
+                    ctx.translate(px,py); ctx.rotate(rot); ctx.scale(1,lscale);
+                    ctx.globalAlpha=Math.max(0,Math.min(1,alpha));
+                    ctx.drawImage(b.cnv,-b.cnv.width/2,-b.cnv.height/2);
+                    ctx.restore();
+                }
+                ctx.globalCompositeOperation='source-over';
+                requestAnimationFrame(draw);
+            }
+            build(); addEventListener('resize',build); requestAnimationFrame(draw);
+        })();
+
         // Navigation scroll effect
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
-            if (window.scrollY > 60) {
+            if (window.scrollY > 15) {
                 nav.classList.add('scrolled');
             } else {
                 nav.classList.remove('scrolled');
@@ -1668,7 +1953,7 @@
             btn.innerHTML = '✓ Mensaje enviado';
             btn.style.backgroundColor = '#2D6A4F';
             btn.style.color = 'var(--white)';
-            
+
             // Reset after 3 seconds
             setTimeout(() => {
                 btn.innerHTML = originalText;
